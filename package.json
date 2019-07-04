@@ -1,6 +1,6 @@
 {
-	"name": "on-debug-resolve",
-	"displayName": "on-debug-resolve",
+	"name": "on-debug-resolve-node",
+	"displayName": "on-debug-resolve-node",
 	"publisher": "test",
 	"description": "",
 	"version": "0.0.1",
@@ -12,7 +12,8 @@
 	],
 	"repository": "https://github.com/akosyakov/debug-activation-events",
 	"activationEvents": [
-		"onDebugResolve"
+		"onDebugResolve:node",
+		"onDebugResolve:node2"
 	],
 	"main": "./out/extension.js",
 	"scripts": {
@@ -28,18 +29,5 @@
 		"tslint": "^5.12.1",
 		"@types/node": "^10.12.21",
 		"@types/mocha": "^2.2.42"
-	},
-	"contributes": {
-		"debuggers": [
-			{
-				"type": "mock",
-				"label": "Mock Debug",
-				"program": "./out/mockDebug.js",
-				"runtime": "node",
-				"languages": [
-					"markdown"
-				]
-			}
-		]
 	}
 }
