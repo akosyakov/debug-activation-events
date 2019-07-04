@@ -5,17 +5,11 @@ import * as vscode from 'vscode';
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
-	vscode.window.showInformationMessage('onDebugResolve:node');
-	vscode.debug.registerDebugConfigurationProvider('node', {
-		resolveDebugConfiguration: (_, config) => {
-			vscode.window.showInformationMessage('resolveDebugConfiguration:node');
-			return config;
-		}
-	});
-	vscode.debug.registerDebugConfigurationProvider('node2', {
-		resolveDebugConfiguration: (_, config) => {
-			vscode.window.showInformationMessage('resolveDebugConfiguration:node2');
-			return config;
+	vscode.window.showInformationMessage('onDebugAdapterProtocolTracker');
+	vscode.debug.registerDebugAdapterTrackerFactory('*', {
+		createDebugAdapterTracker(session: vscode.DebugSession) {
+			vscode.window.showInformationMessage('createDebugAdapterTracker');
+			return {};
 		}
 	});
 }

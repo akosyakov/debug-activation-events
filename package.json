@@ -1,6 +1,6 @@
 {
-	"name": "on-debug-resolve-node",
-	"displayName": "on-debug-resolve-node",
+	"name": "on-debug-adapter-protocol-tracker",
+	"displayName": "on-debug-adapter-protocol-tracker",
 	"publisher": "test",
 	"description": "",
 	"version": "0.0.1",
@@ -12,8 +12,7 @@
 	],
 	"repository": "https://github.com/akosyakov/debug-activation-events",
 	"activationEvents": [
-		"onDebugResolve:node",
-		"onDebugResolve:node2"
+		"onDebugAdapterProtocolTracker"
 	],
 	"main": "./out/extension.js",
 	"scripts": {
