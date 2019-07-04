@@ -1,6 +1,6 @@
 {
-	"name": "on-debug",
-	"displayName": "on-debug",
+	"name": "on-debug-initial-configurations",
+	"displayName": "on-debug-initial-configurations",
 	"publisher": "test",
 	"description": "",
 	"version": "0.0.1",
@@ -12,7 +12,7 @@
 	],
 	"repository": "https://github.com/akosyakov/debug-activation-events",
 	"activationEvents": [
-		"onDebug"
+		"onDebugInitialConfigurations"
 	],
 	"main": "./out/extension.js",
 	"scripts": {
@@ -28,5 +28,18 @@
 		"tslint": "^5.12.1",
 		"@types/node": "^10.12.21",
 		"@types/mocha": "^2.2.42"
+	},
+	"contributes": {
+		"debuggers": [
+			{
+				"type": "mock",
+				"label": "Mock Debug",
+				"program": "./out/mockDebug.js",
+				"runtime": "node",
+				"languages": [
+					"markdown"
+				]
+			}
+		]
 	}
 }
